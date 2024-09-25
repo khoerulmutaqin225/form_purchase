@@ -1,4 +1,3 @@
-```markdown
 # Odoo 14 POS Customization Tasks
 
 This document outlines the additional tasks for customizing the Odoo 13 Point of Sale (POS) module. The enhancements include disabling price and discount buttons, modifying displayed values, automating email receipts, and customizing form behavior.
@@ -31,9 +30,3 @@ For any issues or suggestions regarding these tasks, please open Issues or submi
 ## License
 
 This module is licensed under the MIT License. See the `LICENSE` file for details.
-```
-
-### Notes:
-- Replace the placeholders with actual implementation details where necessary.
-- Ensure you adjust the paths and module structure as needed based on your project.
-- Test the functionalities thoroughly to confirm they work as intended.
