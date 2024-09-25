@@ -56,5 +56,120 @@
         sequence="80" 
         action="action_material_records" 
         parent="material_menu_root"/>
+
+        <!-- Demo data -->
+        <record id="partner_1" model="res.partner">
+            <field name="name">Budi</field>
+        </record>
+        <record id="partner_2" model="res.partner">
+            <field name="name">Siti</field>
+        </record>
+        <record id="partner_3" model="res.partner">
+            <field name="name">Joko</field>
+        </record>
+        <record id="partner_4" model="res.partner">
+            <field name="name">Ayu</field>
+        </record>
+        <record id="partner_5" model="res.partner">
+            <field name="name">Dwi</field>
+        </record>
+        <record id="partner_6" model="res.partner">
+            <field name="name">Rina</field>
+        </record>
+        <record id="partner_7" model="res.partner">
+            <field name="name">Andi</field>
+        </record>
+        <record id="partner_8" model="res.partner">
+            <field name="name">Putri</field>
+        </record>
+        <record id="partner_9" model="res.partner">
+            <field name="name">Rizky</field>
+        </record>
+        <record id="partner_10" model="res.partner">
+            <field name="name">Lestari</field>
+        </record>
+    
+
+        <!-- Material -->
+         <record id="material_record_1" model="material.record">
+            <field name="material_code">MAT001</field>
+            <field name="material_name">Cotton Fabric A</field>
+            <field name="material_type">fabric</field>
+            <field name="material_buy_price">150.0</field>
+            <field name="related_supplier_id" ref="partner_1"/>
+        </record>
+
+        <record id="material_record_2" model="material.record">
+            <field name="material_code">MAT002</field>
+            <field name="material_name">Denim Blue Jeans</field>
+            <field name="material_type">jeans</field>
+            <field name="material_buy_price">250.0</field>
+            <field name="related_supplier_id" ref="partner_2"/>
+        </record>
+
+        <record id="material_record_3" model="material.record">
+            <field name="material_code">MAT003</field>
+            <field name="material_name">Organic Cotton</field>
+            <field name="material_type">cotton</field>
+            <field name="material_buy_price">200.0</field>
+            <field name="related_supplier_id" ref="partner_3"/>
+        </record>
+
+        <record id="material_record_4" model="material.record">
+            <field name="material_code">MAT004</field>
+            <field name="material_name">Silk Fabric B</field>
+            <field name="material_type">fabric</field>
+            <field name="material_buy_price">300.0</field>
+            <field name="related_supplier_id" ref="partner_4"/>
+        </record>
+
+        <record id="material_record_5" model="material.record">
+            <field name="material_code">MAT005</field>
+            <field name="material_name">Stretch Jeans</field>
+            <field name="material_type">jeans</field>
+            <field name="material_buy_price">220.0</field>
+            <field name="related_supplier_id" ref="partner_5"/>
+        </record>
+
+        <record id="material_record_6" model="material.record">
+            <field name="material_code">MAT006</field>
+            <field name="material_name">Cotton Blend</field>
+            <field name="material_type">cotton</field>
+            <field name="material_buy_price">180.0</field>
+            <field name="related_supplier_id" ref="partner_6"/>
+        </record>
+
+        <record id="material_record_7" model="material.record">
+            <field name="material_code">MAT007</field>
+            <field name="material_name">Linen Fabric</field>
+            <field name="material_type">fabric</field>
+            <field name="material_buy_price">350.0</field>
+            <field name="related_supplier_id" ref="partner_7"/>
+        </record>
+
+        <record id="material_record_8" model="material.record">
+            <field name="material_code">MAT008</field>
+            <field name="material_name">Classic Jeans</field>
+            <field name="material_type">jeans</field>
+            <field name="material_buy_price">210.0</field>
+            <field name="related_supplier_id" ref="partner_8"/>
+        </record>
+
+        <record id="material_record_9" model="material.record">
+            <field name="material_code">MAT009</field>
+            <field name="material_name">Cotton Voile</field>
+            <field name="material_type">cotton</field>
+            <field name="material_buy_price">160.0</field>
+            <field name="related_supplier_id" ref="partner_9"/>
+        </record>
+
+        <record id="material_record_10" model="material.record">
+            <field name="material_code">MAT010</field>
+            <field name="material_name">Premium Denim</field>
+            <field name="material_type">jeans</field>
+            <field name="material_buy_price">275.0</field>
+            <field name="related_supplier_id" ref="partner_10"/>
+        </record>
+
   </data>
 </odoo>
