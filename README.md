@@ -25,7 +25,7 @@ This document outlines the additional tasks for customizing the Odoo 13 Point of
 
 ## Contribution
 
-For any issues or suggestions regarding these tasks, please open Issues or submit Pull Requests on our GitHub repository: [repository-link](https://github.com/khoerulmutaqin225/pos-custom.git).
+For any issues or suggestions regarding these tasks, please open Issues or submit Pull Requests on our GitHub repository: [repository-link](https://github.com/khoerulmutaqin225/form_purchase.git).
 
 ## License
 
