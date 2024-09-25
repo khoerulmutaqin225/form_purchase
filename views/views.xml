@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- Tree View -->
+    <record id="view_material_tree" model="ir.ui.view">
+        <field name="name">material.record.tree</field>
+        <field name="model">material.record</field>
+        <field name="arch" type="xml">
+            <tree string="Materials">
+                <field name="material_code"/>
+                <field name="material_name"/>
+                <field name="material_type"/>
+                <field name="material_buy_price"/>
+                <field name="related_supplier_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_material_form" model="ir.ui.view">
+        <field name="name">material.record.form</field>
+        <field name="model">material.record</field>
+        <field name="arch" type="xml">
+            <form string="Material">
+                <sheet>
+                    <group>
+                        <field name="material_code"/>
+                        <field name="material_name"/>
+                        <field name="material_type"/>
+                        <field name="material_buy_price"/>
+                        <field name="related_supplier_id"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <!-- Uncomment buttons if needed -->
+                    <!-- <button string="Save" type="object" name="action_save" class="btn-primary"/> -->
+                    <!-- <button string="Discard" type="object" name="action_discard" class="btn-secondary" confirm="Are you sure you want to discard changes?"/> -->
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_material_records" model="ir.actions.act_window">
+        <field name="name">Materials</field>
+        <field name="res_model">material.record</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="material_menu_root"
+        name="Materials"
+        sequence="170"/>
+                
+    <menuitem id="material_menu_items" 
+        name="Material Records" 
+        sequence="80" 
+        action="action_material_records" 
+        parent="material_menu_root"/>
+  </data>
+</odoo>
