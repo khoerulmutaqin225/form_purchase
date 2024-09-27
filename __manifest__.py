@@ -27,6 +27,7 @@ Long description of module's purpose
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/point_of_sale.xml',
     ],
     'assets': {
         'point_of_sale.assets': [
