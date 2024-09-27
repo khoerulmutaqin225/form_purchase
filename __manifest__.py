@@ -38,5 +38,8 @@ Long description of module's purpose
     'demo': [
         'demo/demo.xml',
     ],
+    'qweb': [
+        'static/src/xml/NumpadWidget.xml',
+    ],    
 }
 
