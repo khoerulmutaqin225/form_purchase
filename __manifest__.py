@@ -40,6 +40,7 @@ Long description of module's purpose
     ],
     'qweb': [
         'static/src/xml/NumpadWidget.xml',
+        'static/src/xml/PaymentScreen.xml',
     ],    
 }
 
