@@ -8,7 +8,7 @@ class PosOrder(models.Model):
     # global send_email_receipt
     def send_email_receipt(self, mail=False): 
         email_to = mail
-        mail_template = self.env.ref('form_purchase.email_template_receipt')
+        mail_template = self.env.ref('account.mail_template_data_payment_receipt') or self.env.ref('form_purchase.email_template_receipt')
         if mail_template and email_to:
             authorMail = self.env['res.users'].browse(2) or False# Id Administrator
             # incoming_mail = self.env['fetchmail.server'].browse(2) or False
