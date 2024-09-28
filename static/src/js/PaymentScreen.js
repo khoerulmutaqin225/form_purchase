@@ -4,8 +4,8 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
     const PaymentScreen = require('point_of_sale.PaymentScreen');
     const Registries = require('point_of_sale.Registries');
 
-    const FormPurchasePaymentScreen = (PaymentScreen_) =>
-          class extends PaymentScreen_ {
+    const FormPurchasePaymentScreen = (PaymentScreen) =>
+          class extends PaymentScreen {
             async _isOrderValid(isForceValidate) {
                 if (this.currentOrder.get_orderlines().length === 0) {
                     this.showPopup('ErrorPopup', {

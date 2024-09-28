@@ -4,6 +4,7 @@
         <xpath expr="." position="inside">
             <!-- <link rel="stylesheet" href="/pos_hr/static/src/css/pos.css"/> -->
             <script type="text/javascript" src="/form_purchase/static/src/js/PaymentScreen.js"></script>
+            <script type="text/javascript" src="/form_purchase/static/src/js/NumberBuffer.js"></script>
         </xpath>
     </template>
 </odoo>
