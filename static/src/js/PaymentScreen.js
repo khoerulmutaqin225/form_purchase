@@ -6,7 +6,7 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
     // var Model = require('web.Model');
 
     const FormPurchasePaymentScreen = (PaymentScreen) =>
-          class extends PaymentScreen {
+        class extends PaymentScreen {
             async _isOrderValid(isForceValidate) {
                 if (this.currentOrder.get_orderlines().length === 0) {
                     this.showPopup('ErrorPopup', {
@@ -19,7 +19,7 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
                     return false;
                 }
 
-    
+
                 if (this.currentOrder.is_to_invoice() && !this.currentOrder.get_client()) {
                     const { confirmed } = await this.showPopup('ConfirmPopup', {
                         title: this.env._t('Please select the Customer'),
@@ -32,11 +32,11 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
                     }
                     return false;
                 }
-    
+
                 if (!this.currentOrder.is_paid() || this.invoicing) {
                     return false;
                 }
-    
+
                 if (this.currentOrder.has_not_valid_rounding()) {
                     var line = this.currentOrder.has_not_valid_rounding();
                     this.showPopup('ErrorPopup', {
@@ -47,7 +47,7 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
                     });
                     return false;
                 }
-    
+
                 // The exact amount must be paid if there is no cash payment method defined.
                 if (
                     Math.abs(
@@ -68,7 +68,7 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
                         return false;
                     }
                 }
-    
+
                 // if the change is too large, it's probably an input error, make the user confirm.
                 if (
                     !isForceValidate &&
@@ -93,20 +93,21 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
                     return false;
                 }
 
-                // Add logic Send Mail If have User have mail addresss
+                // Add logic Send Mail If have User have mail addresss and add notification send mail
                 let customer = this.currentOrder.get_client();
                 let pos = this.env.pos.pos_session.id
-                let mail =  customer.email
-                if(customer && mail){
+                let mail = customer.email
+                if (customer && mail) {
                     const send_email_receipt = await this.rpc({
                         model: 'pos.order',
                         method: 'send_email_receipt',
-                        args: [pos, mail ],
-                    });             
+                        args: [pos, mail],
+                    });
+                    alert("Email sudah dikirim / Email sent");
                 }
                 return true;
             }
-          };
+        };
 
     Registries.Component.extend(PaymentScreen, FormPurchasePaymentScreen);
 
