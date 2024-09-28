@@ -16,7 +16,7 @@ Long description of module's purpose
     # Check https://github.com/khoerulmutaqin225/form_purchase
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '14.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'point_of_sale' ],
@@ -42,6 +42,7 @@ Long description of module's purpose
     'qweb': [
         'static/src/xml/NumpadWidget.xml',
         'static/src/xml/PaymentScreen.xml',
+        'static/src/xml/PaymentScreenNumpadCustom.xml',        
     ],    
 }
 

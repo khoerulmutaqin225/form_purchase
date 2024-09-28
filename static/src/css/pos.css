@@ -1,0 +1,25 @@
+.pos .mode-button.selected-mode {
+    color: white;
+    background: yellow;
+    border-color: transparent;
+}
+.pos .mode-button.selected-mode:hover {
+    background: yellow;
+    color: white;
+    border-color: transparent;
+}
+.paymentmethod .button.active {
+    background: yellow;
+    color: white;
+    border-color: yellow;
+}
+
+.pos .popup.popup-selection .selection-item.selected {
+    background: yellow;
+}
+
+.ticket-screen .controls button.highlight {
+    background: yellow;
+    border: solid 1px #64AF8A;
+    color: white;
+}

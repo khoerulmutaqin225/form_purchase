@@ -1,7 +1,7 @@
 <odoo>
-    <data noupdate="1">
+    <data >
         <record id="email_template_receipt" model="mail.template">
-            <field name="name">Receipt Email</field>
+            <field name="name">Email Template : Purchase Orders</field>
             <field name="model_id" ref="point_of_sale.model_pos_order"/>
             <field name="email_from">${(object.company_id.email or '')}</field>
             <field name="email_to">${object.partner_id.email}</field>
@@ -10,7 +10,7 @@
                 <![CDATA[
                 <p>Thank you for your purchase!</p>
                 <p>Your order details:</p>
-                <p>Order ID: ${object.id}</p>
+                <p>Order ID: ******</p>
                 <p>...</p>
                 ]]>
             </field>

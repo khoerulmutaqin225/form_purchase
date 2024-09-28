@@ -1,16 +1,9 @@
 odoo.define('form_purchase.NumberBuffer', function(require) {
     'use strict';
 
-    const { Component } = owl;
-    const { EventBus } = owl.core;
-    const { onMounted, onWillUnmount, useExternalListener } = owl.hooks;
-    const { useListener } = require('web.custom_hooks');
     const { parse } = require('web.field_utils');
-    const { BarcodeEvents } = require('barcodes.BarcodeEvents');
-    const { _t } = require('web.core');
     const { Gui } = require('point_of_sale.Gui');
     const NumberBuffer = require('point_of_sale.NumberBuffer');
-
     const INPUT_KEYS = new Set(
         ['Delete', 'Backspace', '+1', '+2', '+5', '+10', '+20', '+50','+60','+10000','+50000','+100000'].concat('0123456789+-.,'.split(''))
     );

@@ -3,6 +3,7 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
 
     const PaymentScreen = require('point_of_sale.PaymentScreen');
     const Registries = require('point_of_sale.Registries');
+    // var Model = require('web.Model');
 
     const FormPurchasePaymentScreen = (PaymentScreen) =>
           class extends PaymentScreen {
@@ -93,9 +94,17 @@ odoo.define('form_purchase.PaymentScreen', function (require) {
                 }
 
                 // Add logic Send Mail If have User have mail addresss
-    
+                let customer = this.currentOrder.get_client();
+                let pos = this.env.pos.pos_session.id
+                let mail =  customer.email
+                if(customer && mail){
+                    const send_email_receipt = await this.rpc({
+                        model: 'pos.order',
+                        method: 'send_email_receipt',
+                        args: [pos, mail ],
+                    });             
+                }
                 return true;
-            
             }
           };
 

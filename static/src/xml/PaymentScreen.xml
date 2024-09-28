@@ -2,30 +2,7 @@
 <templates id="template" xml:space="preserve">
     <t t-name="PaymentScreen" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
         <xpath expr="//PaymentScreenNumpad" position="replace">
-            <div class="numpad">
-                <PSNumpadInputButton value="'1'" />
-                <PSNumpadInputButton value="'2'" />
-                <PSNumpadInputButton value="'3'" />
-                <PSNumpadInputButton value="'+10000'" changeClassTo="'mode-button'" />
-                <br />
-                <PSNumpadInputButton value="'4'" />
-                <PSNumpadInputButton value="'5'" />
-                <PSNumpadInputButton value="'6'" />
-                <PSNumpadInputButton value="'+50000'" changeClassTo="'mode-button'" />
-                <br />
-                <PSNumpadInputButton value="'7'" />
-                <PSNumpadInputButton value="'8'" />
-                <PSNumpadInputButton value="'9'" />
-                <PSNumpadInputButton value="'+100000'" changeClassTo="'mode-button'" />
-                <br />
-                <PSNumpadInputButton value="'-'" text="'+/-'" />
-                <PSNumpadInputButton value="'0'" />
-                <PSNumpadInputButton value="decimalPoint" />
-                <PSNumpadInputButton value="'Backspace'">
-                    <img src="/point_of_sale/static/src/img/backspace.png" width="24" height="21"
-                     alt="Backspace" />
-                </PSNumpadInputButton>
-            </div>
+            <PaymentScreenNumpadCustom />
         </xpath>
     </t>
 </templates>
